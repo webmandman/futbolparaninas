@@ -1,11 +1,9 @@
 {
   "name": "futbolparaninas",
-  "scripts": {
-  },
   "env": {
-    "NPM_CONFIG_PRODUCTION": {
-      "required": true
-    }
+    "NPM_CONFIG_PRODUCTION": "false"
+  },
+  "scripts": {
   },
   "formation": {
   },

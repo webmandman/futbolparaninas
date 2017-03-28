@@ -8,12 +8,16 @@
   	"compat"
   ],
   "rules": {
-  	"linebreak-style": [2, "windows"],
+  	"linebreak-style": ["error", "windows"],
   	"semi": [2, "never"],
     "no-unexpected-multiline": 2,
     "compat/compat": 2
   },
   "env":{
-  	"jest": true
+  	"jest": true,
+    "browser": true
+  },
+  "settings": {
+    "polyfills": ["fetch"]
   }
 }
