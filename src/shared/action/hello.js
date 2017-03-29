@@ -2,7 +2,7 @@
 import 'isomorphic-fetch'
 
 import { createAction } from 'redux-actions'
-import { helloEndpointRoute } from '../../shared/routes'
+import { ChatEndpointRoute } from '../../shared/routes'
 
 export const SAY_HELLO = 'SAY_HELLO'
 export const SAY_HELLO_ASYNC_REQUEST = 'SAY_HELLO_ASYNC_REQUEST'
@@ -16,7 +16,7 @@ export const sayHelloAsyncFailure = createAction(SAY_HELLO_ASYNC_FAILURE)
 
 export const sayHelloAsync = (num: number) => (dispatch: Function) => {
   dispatch(sayHelloAsyncRequest())
-  return fetch(helloEndpointRoute(num), { method: 'GET' })
+  return fetch(ChatEndpointRoute(num), { method: 'GET' })
     .then((res) => {
       if (!res.ok) throw Error(res.statusText)
       return res.json()

@@ -9,7 +9,7 @@ import {
   sayHelloAsyncFailure,
 } from './hello'
 
-import { helloEndpointRoute } from '../../shared/routes'
+import { ChatEndpointRoute } from '../../shared/routes'
 
 const mockStore = configureMockStore([thunkMiddleware])
 
@@ -18,7 +18,7 @@ afterEach(() => {
 })
 
 test('sayHelloAsync success', () => {
-  fetchMock.get(helloEndpointRoute(666), { serverMessage: 'Async hello success' })
+  fetchMock.get(ChatEndpointRoute(666), { serverMessage: 'Async hello success' })
   const store = mockStore()
   return store.dispatch(sayHelloAsync(666))
     .then(() => {
@@ -30,7 +30,7 @@ test('sayHelloAsync success', () => {
 })
 
 test('sayHelloAsync 404', () => {
-  fetchMock.get(helloEndpointRoute(666), 404)
+  fetchMock.get(ChatEndpointRoute(666), 404)
   const store = mockStore()
   return store.dispatch(sayHelloAsync(666))
     .then(() => {
@@ -42,7 +42,7 @@ test('sayHelloAsync 404', () => {
 })
 
 test('sayHelloAsync data error', () => {
-  fetchMock.get(helloEndpointRoute(666), {})
+  fetchMock.get(ChatEndpointRoute(666), {})
   const store = mockStore()
   return store.dispatch(sayHelloAsync(666))
     .then(() => {

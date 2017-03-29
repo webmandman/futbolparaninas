@@ -3,26 +3,23 @@
 import React from 'react'
 import { Switch } from 'react-router'
 import { Route } from 'react-router-dom'
-import { APP_NAME } from './config'
 import Nav from './component/nav'
-import HomePage from './component/page/home'
-import HelloPage from './component/page/hello'
-import HelloAsyncPage from './component/page/hello-async'
-import NotFoundPage from './component/page/not-found'
+import StartPage from './component/page/start'
+import JoinPage from './component/page/join'
+import ChatPage from './component/page/chat'
 import {
-  HOME_PAGE_ROUTE,
-  HELLO_PAGE_ROUTE,
-  HELLO_ASYNC_PAGE_ROUTE,
+  START_PAGE_ROUTE,
+  JOIN_PAGE_ROUTE,
+  CHAT_PAGE_ROUTE,
 } from '../shared/routes'
 
 const App = () =>
   <div style={{ paddingTop: 54 }}>
     <Nav />
     <Switch>
-      <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
-      <Route path={HELLO_PAGE_ROUTE} render={() => <HelloPage />} />
-      <Route path={HELLO_ASYNC_PAGE_ROUTE} render={() => <HelloAsyncPage />} />
-      <Route component={NotFoundPage} />
+      <Route exact path={START_PAGE_ROUTE} render={() => <StartPage />} />
+      <Route path={JOIN_PAGE_ROUTE} render={() => <JoinPage />} />
+      <Route path={CHAT_PAGE_ROUTE} render={() => <ChatPage />} />
     </Switch>
   </div>
 

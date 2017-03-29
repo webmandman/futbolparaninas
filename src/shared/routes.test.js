@@ -1,6 +1,6 @@
-import { helloEndpointRoute } from './routes'
+import { ChatEndpointRoute } from './routes'
 
-test('helloEndpointRoute', () => {
-  expect(helloEndpointRoute()).toBe('/ajax/hello/:num')
-  expect(helloEndpointRoute(123)).toBe('/ajax/hello/123')
+test('ChatEndpointRoute', () => {
+  expect(ChatEndpointRoute()).toBe('/ajax/chat/:num')
+  expect(ChatEndpointRoute(123)).toBe('/ajax/chat/123')
 })

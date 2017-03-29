@@ -1,36 +1,36 @@
 // @flow
 
 import {
-  homePage,
-  helloPage,
-  helloAsyncPage,
-  helloEndpoint,
+  startPage,
+  joinPage,
+  chatPage,
+  ChatEndpoint,
 } from './controller'
 
 import {
-  HOME_PAGE_ROUTE,
-  HELLO_PAGE_ROUTE,
-  HELLO_ASYNC_PAGE_ROUTE,
-  helloEndpointRoute,
+  START_PAGE_ROUTE,
+  JOIN_PAGE_ROUTE,
+  CHAT_PAGE_ROUTE,
+  ChatEndpointRoute,
 } from '../shared/routes'
 
 import renderApp from './render-app'
 
 export default (app: Object) => {
-  app.get(HOME_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, homePage()))
+  app.get(START_PAGE_ROUTE, (req, res) => {
+    res.send(renderApp(req.url, startPage()))
   })
 
-  app.get(HELLO_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, helloPage()))
+  app.get(JOIN_PAGE_ROUTE, (req, res) => {
+    res.send(renderApp(req.url, joinPage()))
   })
 
-  app.get(HELLO_ASYNC_PAGE_ROUTE, (req, res) => {
-    res.send(renderApp(req.url, helloAsyncPage()))
+  app.get(CHAT_PAGE_ROUTE, (req, res) => {
+    res.send(renderApp(req.url, chatPage()))
   })
 
-  app.get(helloEndpointRoute(), (req, res) => {
-    res.json(helloEndpoint(req.params.num))
+  app.get(ChatEndpointRoute(), (req, res) => {
+    res.json(ChatEndpoint(req.params.num))
   })
 
   app.get('/500', () => {

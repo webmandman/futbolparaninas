@@ -27,7 +27,7 @@ const renderApp = (location: string, plainPartialState: ?Object, routerContext: 
     `<!doctype html>
     <html>
       <head>
-        <title>FIX ME</title>
+        <title>Futbol Para Ninas</title>
         <link rel="stylesheet" href="${STATIC_PATH}/css/bootstrap.min.css">
         <style class="${JSS_SSR_CLASS}">${sheets.toString()}</style>
       </head>
