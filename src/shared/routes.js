@@ -1,8 +1,7 @@
 // @flow
 
-export const HOME_PAGE_ROUTE = '/'
-export const HELLO_PAGE_ROUTE = '/hello'
-export const HELLO_ASYNC_PAGE_ROUTE = '/hello-async'
-export const NOT_FOUND_DEMO_PAGE_ROUTE = '/404'
+export const START_PAGE_ROUTE = '/'
+export const JOIN_PAGE_ROUTE = '/join'
+export const CHAT_PAGE_ROUTE = '/chat'
 
-export const helloEndpointRoute = (num: ?number) => `/ajax/hello/${num || ':num'}`
+export const ChatEndpointRoute = (num: ?number) => `/ajax/chat/${num || ':num'}`
