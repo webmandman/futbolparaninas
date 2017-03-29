@@ -1,5 +1,16 @@
 {
+  "name": "futbolparaninas",
   "env": {
     "NPM_CONFIG_PRODUCTION": "false"
-  }
+  },
+  "scripts": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
 }
